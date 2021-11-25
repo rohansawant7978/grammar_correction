@@ -13,7 +13,7 @@ from nltk.translate.gleu_score import sentence_gleu
 from utilities import *
 
 model = encoder_decoder(enc_vocab_size,dec_vocab_size,embedding_dim,lstm_size,input_length,batch_size,att_units)
-model.load_weights('/03_enc_dec_with_attention')
+model.load_weights('/content/drive/MyDrive/Self Case studies/CS02 Grammar Error Corrector/Models/03 enc_dec_with_attention/03_enc_dec_with_attention')
 
 def function1(input_sentence):
     '''This dunction takes sentence as input and returns a grammatically correct sentence as output'''
@@ -43,8 +43,8 @@ def function1(input_sentence):
     for i in pred:
         sentence.append(corrc_idx_wrd_dict[i])
     return " ".join(sentence)
-  
- def function2(file):
+
+def function2(file):
     df = pd.read_csv(file)
     glue_score_arr = []
     for i in tqdm(range(len(df))):
