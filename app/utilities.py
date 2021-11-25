@@ -7,7 +7,7 @@ import pickle
 from tensorflow.keras.optimizers import Adam,Nadam
 
 
-tokenizer_enc = pickle.load(open(r"/content/grammar_correction/app/tokenizer_dec_20211112.pkl", "rb"))
+tokenizer_enc = pickle.load(open(r"/content/grammar_correction/app/tokenizer_enc_20211112.pkl", "rb"))
 tokenizer_dec = pickle.load(open(r"/content/grammar_correction/app/tokenizer_dec_20211112.pkl", "rb"))
 
 class Encoder(tf.keras.layers.Layer):
